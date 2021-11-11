@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <style>
+        div {
+          margin-bottom: 10px;
+        }
+        label {
+          display: inline-block;
+          width: 150px;
+        }
+      </style>   
+<title>Formulario CV</title>
+<meta charset="utf-8">
+</head>
+<body>
+
+<h1 style="text-align:center;">Currículum Vitae</h1>
+
+<form action="mailto:cv@gmail.com" method="post" autocomplete="off">
+    <fieldset>
+        <legend style="color: blue;">Datos personales</legend>
+
+        <label for="DNI">DNI</label>
+        <input type="text" id="DNI" name="DNI" placeholder="11.111.111-X" pattern="[0-9]{8}[A-Za-z]{1}" size="13" required><br><br>
+
+        <label for="Nombre">Nombre</label>
+        <input type="text" id="Nombre" name="Nombre" maxlength="20" pattern="[A-Za-z]{1,32}" autocomplete="on" required><br><br>
+
+        <label for="Apellido1">Apellido 1</label>
+        <input type="text" id="Apellido1" name="Apellido1" maxlength="30" pattern="[A-Za-z]{1,32}" autocomplete="on" required><br><br>
+
+        <label for="Apellido2">Apellido 2</label>
+        <input type="text" id="Apellido2" name="Apellido2" maxlength="30" pattern="[A-Za-z]{1,32}" autocomplete="on" required><br><br>
+
+        <label for="Dirección">Dirección</label>
+        <input type="text" id="Dirección" name="Dirección" maxlength="50"><br><br>
+
+        <label for="Código-postal">Código postal</label>
+        <input type="text" id="Código-postal" name="Código-postal" placeholder="11111" pattern="[0-9]{5}" size="6"><br><br>
+
+        <label for="Población">Población</label>
+        <input type="text" id="Población" name="Población" maxlength="50"><br><br>
+
+        <label for="Provincia">Provincia</label>
+        <select id="Provincia" name="Provincia">
+            <option value="Asturias">Asturias</option>
+            <option value="Barcelona">Barcelona</option>
+            <option value="Granada">Granada</option>
+            <option value="Las Palmas">Las Palmas</option>
+            <option value="Santa Cruz de Tenerife">Santa Cruz de Tenerife</option>
+        </select><br><br>
+
+        <label for="Fecha-de-nacimiento">Fecha de nacimiento</label>
+        <input type="date" id="Fecha-de-nacimiento" name="Fecha-de-nacimiento" max="1998-12-31"><br><br>
+        
+        Sexo <input type="radio" id="Mujer" name="Sexo" value="Mujer">
+        <label for="Mujer">Mujer</label>
+        <input type="radio" id="Hombre" name="Sexo" value="Hombre">
+        <label for="Hombre">Hombre</label><br><br>
+
+        <label for="Teléfono">Teléfono</label>
+        <input type="text" id="Teléfono" name="Teléfono" placeholder="999-999-999" pattern="[6,9]{1}[0-9]{8}" size="13" required><br><br>
+
+        <label for="Email">Email</label>
+        <input type="text" id="Email" name="Email">
+
+    </fieldset>
+
+    <fieldset>
+        <legend style="color: blue;">Formación y experiencia</legend>
+
+        <label for="Estudios-cursados">Estudios cursados</label>
+        <select id="Estudios-cursados" name="Estudios-cursados" required>
+            <option value="" selected disabled hidden>Nivel de Estudios</option>
+            <option value="Ciclo Grado Medio">Ciclo Grado Medio</option>
+            <option value="Ciclo Grado Superior">Ciclo Grado Superior</option>
+            <option value="Universitarios">Universitarios</option>
+        </select><br><br>
+
+        <label for="Título">Título</label>
+        <input type="text" id="Título" name="Título" required><br><br>
+
+        Experiencia laboral <input type="radio" id="Sí" name="Experiencia-laboral" value="Sí">
+        <label for="Sí">Sí</label>
+        <input type="radio" id="No" name="Experiencia-laboral" value="No">
+        <label for="No">No</label><br><br>
+
+        <label for="Idiomas">Idiomas</label>
+        <select id="Idiomas" name="Idiomas" multiple>
+            <option value="Español">Español</option>
+            <option value="Inglés">Inglés</option>
+            <option value="Francés">Francés</option>
+            <option value="Alemán">Alemán</option>
+        </select><br><br>
+
+        <label for="Currículum">Currículum</label>
+        <input type="file" id="Currículum" name="Currículum">
+
+    </fieldset>
+
+    <fieldset>
+        <legend style="color: blue;">Acceso al portal</legend>
+
+        <label for="Usuario">Usuario</label>
+        <input type="text" id="Usuario" name="Usuario" pattern="[0-9,A-Za-z]{10}" maxlength="10" required><br><br>
+
+        <label for="Contraseña">Contraseña</label>
+        <input type="password" id="Contraseña" name="Contraseña" maxlength="10" required>
+
+    </fieldset>
+    <fieldset>
+        <legend style="color: blue;">Otros</legend>
+
+        <label for="Otros-datos">Otros Datos</label>
+        <textarea id="Otros-datos" name="Otros-datos" rows="9" cols="60" placeholder="Indica aquí cualquier otra información"></textarea>
+
+    </fieldset>
+
+    <input type="submit" style="margin-left: 47%;" value="enviar datos">
+
+    <input type="reset" value="limpiar datos">
+
+
+</form>
+</body>
+</html>
